@@ -29,7 +29,7 @@ OptiRoute is an intelligent route optimization solution that transforms how logi
 
 ```bash
 # Clone the repository
-git clone https://github.com/godiah/opti-route.git
+git clone https://github.com/godiah/OptiRoute.git
 
 # Navigate to the project directory
 cd opti-route
