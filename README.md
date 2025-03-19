@@ -54,12 +54,7 @@ php artisan serve
 
 ## 🚀 Getting Started
 
-1. Register your company and add administrator accounts
-2. Configure your fleet details (vehicle types, capacities)
-3. Import or manually enter delivery locations
-4. Generate optimized routes with a single click
-5. Share route links with your drivers
-6. Monitor delivery progress in real-time
+_Coming soon_
 
 ## 📋 Usage Example
 

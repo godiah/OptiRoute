@@ -1,9 +1,9 @@
-@import "tailwindcss";
-
 /* Import the fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -17,13 +17,13 @@
     --font-tertiary: "Plus Jakarta Sans", sans-serif;
 
     /* Colors */
-    --color-primary-blue: #1e90ff; /** Primary elements like buttons */
-    --color-secondary-green: #32cd32; /** Secondary actions or positive indicators */
-    --color-dark-blue: #001f3f; /** Headers & Important text */
-    --color-light-gray: #f0f0f0; /** Background */
-    --color-medium-gray: #cccccc; /** Borders & Secondary texts*/
+    --color-primary-blue: #2563eb; /** Primary elements like buttons */
+    --color-primary-blue-hover: #9ca3af; /* Slightly lighter blue for hover text */
+    --color-secondary-green: #10b981; /** Secondary actions or positive indicators */
+    --color-light-gray: #f3f4f6; /** Background */
+    --color-medium-gray: #cccccc; /** Borders & Secondary texts #a3a3a3*/
     --color-white: #ffffff;
-    --color-dark-text: #333333; /** Primary texts */
+    --color-dark-text: #111827; /** Primary texts */
     --color-accent-blue: #007bff; /** Links & CTAs */
 }
 
@@ -43,11 +43,6 @@
     }
     .text-secondary-green {
         color: var(--color-secondary-green);
-    }
-
-    /* Headers */
-    .text-dark-blue {
-        color: var(--color-dark-blue);
     }
 
     /* Primary Text */
@@ -73,9 +68,6 @@
     .bg-secondary-green {
         background-color: var(--color-secondary-green);
     }
-    .bg-dark-blue {
-        background-color: var(--color-dark-blue);
-    }
 
     /* Border Colors */
     .bg-medium-gray {
@@ -91,4 +83,52 @@
     .btn-secondary {
         @apply bg-secondary-green text-white px-4 py-2 rounded-md transition-colors;
     }
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+.nav-link {
+    position: relative;
+    color: var(--color-dark-text);
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background-color: var(--color-primary-blue);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primary-blue-hover);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    background-color: var(--color-primary-blue-hover);
+}
+
+.nav-link.active {
+    color: var(--color-primary-blue);
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background-color: var(--color-primary-blue);
 }

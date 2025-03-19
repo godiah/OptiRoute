@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <h1 class="text-3xl font-tertiary underline text-primary-blue">
-        Hello world!
-    </h1>
+    <x-navbar />
+
+    <x-hero />
 </body>
 
 </html>
