@@ -13,9 +13,16 @@
 </head>
 
 <body>
+    <!-- Navigation -->
     <x-navbar />
 
+    <!-- Hero Section -->
     <x-hero />
+
+    <!-- Trusted Partners & Statistics -->
+    <x-partners-stats />
+
+    <!-- How It Works Section -->
 </body>
 
 </html>
