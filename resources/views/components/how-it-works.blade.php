@@ -1,4 +1,4 @@
-<section id="how-it-works" class="bg-white py-20 overflow-hidden font-main">
+<section id="how-it-works" class="bg-white py-12 md:py-20 overflow-hidden font-main">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <!-- Decorative background elements -->
         <div class="absolute top-1/4 left-0 w-40 h-40 rounded-full bg-primary-blue opacity-5 -translate-x-1/2"></div>
@@ -11,12 +11,17 @@
         <!-- Section Heading -->
         <div class="mb-4 md:mb-8 relative">
             <div class="flex items-center w-full mb-2">
-                <h2 class="text-4xl font-bold font-secondary whitespace-nowrap drop-shadow-lg pr-4">How <span
+                <h2
+                    class="text-3xl text-center mx-auto md:text-4xl font-bold font-secondary md:whitespace-nowrap drop-shadow-lg md:pr-4">
+                    How
+                    <span
                         class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">OptiRoute</span>
-                    Works</h2>
-                <hr class="w-full border-gray-300">
+                    Works
+                </h2>
+                <hr class="hidden md:block w-full border-gray-300">
             </div>
-            <p class="text-gray-500">Streamline your logistics operations with our intelligent route optimization system
+            <p class="text-gray-500 text-center md:text-start">Streamline your logistics operations with our intelligent
+                route optimization system
             </p>
         </div>
 
@@ -164,10 +169,10 @@
 
         <!-- Detailed System Flow Diagram -->
         <div class="container mx-auto px-4 mt-24 mb-12">
-            <div class="flex flex-col lg:flex-row items-start gap-16">
+            <div class="flex flex-col lg:flex-row items-start gap-4 md:gap-16">
                 <!-- Title section -->
                 <div class="w-full lg:w-1/3 text-center lg:text-left">
-                    <h3 class="text-4xl font-bold font-secondary whitespace-nowrap drop-shadow-lg">
+                    <h3 class="text-4xl font-bold font-secondary md:whitespace-nowrap drop-shadow-lg">
                         <span
                             class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Logistics</span>
                         Process Overview
@@ -191,10 +196,14 @@
         <div class="mt-2">
             <div class="relative mt-16 mb-12 pt-8 px-8 pb-8 border-2 border-gray-200 rounded-2xl">
                 <!-- Title on the border -->
-                <div class="absolute -top-4 left-8 px-4 bg-white">
-                    <h2 class="text-3xl font-bold font-secondary whitespace-nowrap drop-shadow-lg pr-4">Advanced <span
+                <div class="absolute -top-4 left-4 md:left-8 px-1.5 md:px-4 bg-white">
+                    <h2
+                        class="md:flex md:gap-1.5  text-3xl font-bold font-secondary  md:whitespace-nowrap drop-shadow-lg md:pr-4">
+                        <span class="hidden md:block">Advanced</span>
+                        <span
                             class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Optimization</span>
-                        Tools</h2>
+                        Tools
+                    </h2>
                 </div>
 
                 <!-- Cluster group 1 - connected with lines -->

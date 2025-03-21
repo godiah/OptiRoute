@@ -85,6 +85,21 @@
     }
 }
 
+@keyframes infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@layer utilities {
+    .animate-infinite-scroll {
+        animation: infinite-scroll 25s linear infinite;
+    }
+}
+
 html,
 body {
     margin: 0;

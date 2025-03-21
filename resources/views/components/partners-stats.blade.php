@@ -1,48 +1,41 @@
-<div class="bg-white py-16 font-main">
+<div class="bg-white py-10 md:py-16 font-main">
     <!-- Partners Carousel Section -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-4 md:mb-8">
             <div class="flex items-center w-full mb-2">
-                <h2 class="text-4xl font-bold font-secondary whitespace-nowrap drop-shadow-lg pr-4">Trusted <span
+                <h2
+                    class="text-3xl text-center mx-auto md:text-4xl font-bold font-secondary md:whitespace-nowrap drop-shadow-lg md:pr-4">
+                    Trusted <span
                         class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Partners</span>
                 </h2>
-                <hr class="w-full border-gray-300">
+                <hr class="hidden md:block w-full border-gray-300">
             </div>
-            <p class="text-gray-500">Powering logistics operations for industry leaders worldwide</p>
+            <p class="text-gray-500 text-center md:text-start">Powering logistics operations for industry leaders
+                worldwide</p>
         </div>
-        <div class="relative overflow-hidden p-8">
-            {{-- Gradient overlays for smooth fade effect --}}
-            <div class="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
-            <div class="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
 
-            {{-- Logo slider wrapper --}}
-            <div class="overflow-hidden w-full">
-                {{-- Logo slider track --}}
-                <div class="logos-slide-track flex">
-                    {{-- First set of logos --}}
+        <div class="w-full flex justify-center">
+            <div
+                class="w-xl text-center inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+
+                <ul
+                    class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
                     @foreach (['amazon', 'dhl', 'ikea', 'walmart'] as $partner)
-                        <div class="logo-item flex-shrink-0 mx-6 md:mx-8 flex items-center justify-center">
+                        <li class="flex-shrink-0">
                             <img src="{{ asset('images/' . $partner . '.png') }}" alt="{{ ucfirst($partner) }} logo"
                                 class="h-8 md:h-12 w-auto hover:scale-110 transition-all duration-300">
-                        </div>
+                        </li>
                     @endforeach
-
-                    {{-- Second set (duplicate) --}}
+                </ul>
+                <ul class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+                    aria-hidden="true">
                     @foreach (['amazon', 'dhl', 'ikea', 'walmart'] as $partner)
-                        <div class="logo-item flex-shrink-0 mx-6 md:mx-8 flex items-center justify-center">
+                        <li class="flex-shrink-0">
                             <img src="{{ asset('images/' . $partner . '.png') }}" alt="{{ ucfirst($partner) }} logo"
                                 class="h-8 md:h-12 w-auto hover:scale-110 transition-all duration-300">
-                        </div>
+                        </li>
                     @endforeach
-
-                    {{-- Third set (duplicate) --}}
-                    @foreach (['amazon', 'dhl', 'ikea', 'walmart'] as $partner)
-                        <div class="logo-item flex-shrink-0 mx-6 md:mx-8 flex items-center justify-center">
-                            <img src="{{ asset('images/' . $partner . '.png') }}" alt="{{ ucfirst($partner) }} logo"
-                                class="h-8 md:h-12 w-auto hover:scale-110 transition-all duration-300">
-                        </div>
-                    @endforeach
-                </div>
+                </ul>
             </div>
         </div>
     </div>
@@ -53,12 +46,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="pt-16 mb-4 md:mb-8">
             <div class="flex items-center w-full mb-2">
-                <h2 class="text-4xl font-bold font-secondary whitespace-nowrap drop-shadow-lg pr-4">Making an <span
+                <h2
+                    class="text-3xl text-center mx-auto md:text-4xl font-bold font-secondary md:whitespace-nowrap drop-shadow-lg md:pr-4">
+                    Making an <span
                         class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Impact</span>
                 </h2>
-                <hr class="w-full border-gray-300">
+                <hr class="hidden md:block w-full border-gray-300">
             </div>
-            <p class="text-gray-500">Transforming logistics operations with AI-powered
+            <p class="text-gray-500 text-center md:text-start">Transforming logistics operations with AI-powered
                 optimization</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -165,97 +160,3 @@
         </div>
     </div>
 </section>
-
-
-<style>
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(calc(-1 * (var(--logo-width) * 4)));
-            /* Move by the width of one set of logos */
-        }
-    }
-
-    .logos-slide-track {
-        --logo-width: 160px;
-        /* Approximate width of each logo item including margins */
-        animation: scroll 20s linear infinite;
-        width: calc(var(--logo-width) * 12);
-        /* Total width: 3 sets of 4 logos */
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .logos-slide-track {
-            --logo-width: 130px;
-            /* Smaller on mobile */
-        }
-    }
-
-    /* Pause on hover */
-    .logos-slide-track:hover {
-        animation-play-state: paused;
-    }
-</style>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Calculate actual logo width for more precise animation
-        const calculateLogoSetWidth = () => {
-            const logoItems = document.querySelectorAll('.logo-item');
-            if (logoItems.length === 0) return;
-
-            // Get the width of the first set of logos (first 4 items)
-            let totalWidth = 0;
-            const logoCount = 4; // Number of unique logos
-
-            for (let i = 0; i < logoCount; i++) {
-                if (logoItems[i]) {
-                    // Get the actual width including margins
-                    const style = window.getComputedStyle(logoItems[i]);
-                    const width = logoItems[i].offsetWidth;
-                    const marginLeft = parseFloat(style.marginLeft);
-                    const marginRight = parseFloat(style.marginRight);
-                    totalWidth += width + marginLeft + marginRight;
-                }
-            }
-
-            // Update the CSS variable
-            const track = document.querySelector('.logos-slide-track');
-            if (track && totalWidth > 0) {
-                // Set the item width
-                document.documentElement.style.setProperty('--logo-width', (totalWidth / logoCount) + 'px');
-
-                // Also update animation duration based on screen size for better visuals
-                const duration = window.innerWidth < 768 ? 15 : 20;
-                track.style.animationDuration = `${duration}s`;
-            }
-        };
-
-        // Calculate on load and resize
-        calculateLogoSetWidth();
-        window.addEventListener('resize', calculateLogoSetWidth);
-
-        // Intersection Observer for performance
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const track = entry.target;
-                if (entry.isIntersecting) {
-                    track.style.animationPlayState = 'running';
-                } else {
-                    track.style.animationPlayState = 'paused';
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        const logoTrack = document.querySelector('.logos-slide-track');
-        if (logoTrack) {
-            observer.observe(logoTrack);
-        }
-    });
-</script>

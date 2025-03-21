@@ -22,7 +22,7 @@
                     Benefits
                 </x-navbar-nav-links>
 
-                <a href="#contact"
+                <a href="#demo"
                     class="bg-gradient-to-r from-primary-blue to-secondary-green shadow-lg hover:shadow-xl hover:from-primary-blue/90 hover:to-secondary-green/90 hover:-translate-y-1 text-white px-5 py-2.5 rounded-md text-sm font-medium transition-colors duration-200 flex items-center ml-4">
                     <span>Book a Demo</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
@@ -63,7 +63,7 @@
                 Benefits
             </a>
 
-            <a href="#contact"
+            <a href="#demo"
                 class="block flex  text-white px-4 py-2.5 rounded-md text-base font-medium  transition-colors duration-200 mt-4 items-center justify-center
                 bg-gradient-to-r from-primary-blue to-secondary-green shadow-lg hover:shadow-xl">
                 <span>Book a Demo</span>
