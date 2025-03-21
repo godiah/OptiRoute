@@ -15,9 +15,10 @@
             that save time and reduce costs by up to 30%
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 mt-2">
+        <div class="flex flex-row gap-4 mt-2">
             <a href="#demo"
-                class="bg-primary-blue hover:bg-accent-blue text-white font-medium py-3 px-8 rounded-md transition-all duration-300 shadow-lg flex items-center justify-center">
+                class="bg-gradient-to-r from-primary-blue to-secondary-green hover:shadow-xl hover:from-primary-blue/90 hover:to-secondary-green/90 hover:-translate-y-1 
+                text-white font-medium py-3 px-8 rounded-md transition-all duration-300 shadow-lg flex items-center justify-center">
                 <span>Book a Demo</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -26,7 +27,8 @@
                 </svg>
             </a>
             <a href="#how-it-works"
-                class="bg-transparent border-2 border-white hover:border-secondary-green hover:text-secondary-green text-white font-medium py-3 px-8 rounded-md transition-all duration-300">
+                class="bg-transparent border-2 border-white hover:border-secondary-green hover:text-secondary-green 
+                text-white font-medium py-3 px-8 rounded-md transition-all duration-300">
                 Learn More
             </a>
         </div>

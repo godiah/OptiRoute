@@ -23,7 +23,7 @@
                 </x-navbar-nav-links>
 
                 <a href="#contact"
-                    class="bg-primary-blue text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-accent-blue transition-colors duration-200 flex items-center ml-4">
+                    class="bg-gradient-to-r from-primary-blue to-secondary-green shadow-lg hover:shadow-xl hover:from-primary-blue/90 hover:to-secondary-green/90 hover:-translate-y-1 text-white px-5 py-2.5 rounded-md text-sm font-medium transition-colors duration-200 flex items-center ml-4">
                     <span>Book a Demo</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -49,7 +49,7 @@
 
     <!-- Mobile menu -->
     <div class="hidden md:hidden" id="mobile-menu">
-        <div class="px-4 pt-2 pb-4 space-y-2 bg-white border-t border-gray-100">
+        <div class="px-2 pt-2 pb-4 space-y-2 bg-white border-t border-gray-100">
             <a href="#home"
                 class="block text-dark-text hover:text-primary-blue hover:bg-light-gray px-3 py-2.5 rounded-md text-base font-medium transition-colors duration-200">
                 Home
@@ -62,13 +62,11 @@
                 class="block text-dark-text hover:text-primary-blue hover:bg-light-gray px-3 py-2.5 rounded-md text-base font-medium transition-colors duration-200">
                 Benefits
             </a>
-            <a href="#demo"
-                class="block text-dark-text hover:text-primary-blue hover:bg-light-gray px-3 py-2.5 rounded-md text-base font-medium transition-colors duration-200">
-                Demo
-            </a>
+
             <a href="#contact"
-                class="block bg-primary-blue text-white px-4 py-2.5 rounded-md text-base font-medium hover:bg-accent-blue transition-colors duration-200 mt-4 flex items-center justify-center">
-                <span>Contact Us</span>
+                class="block flex  text-white px-4 py-2.5 rounded-md text-base font-medium  transition-colors duration-200 mt-4 items-center justify-center
+                bg-gradient-to-r from-primary-blue to-secondary-green shadow-lg hover:shadow-xl">
+                <span>Book a Demo</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -83,27 +81,73 @@
         // Get all nav links
         const navLinks = document.querySelectorAll('.nav-link');
 
-        // Get current hash or default to #home
-        const setActiveLink = () => {
-            const currentHash = window.location.hash || '#home';
+        // Get all sections that correspond to nav links
+        const sections = [];
+        navLinks.forEach(link => {
+            // Get the section ID from the href attribute (removing the # symbol)
+            const sectionId = link.getAttribute('href').substring(1);
+            const section = document.getElementById(sectionId);
+            if (section) {
+                sections.push(section);
+            }
+        });
 
+        // Function to set active link based on hash
+        const setActiveByHash = () => {
+            const currentHash = window.location.hash || '#home';
             // Remove active class from all links
             navLinks.forEach(link => {
                 link.classList.remove('active');
+                link.classList.add('text-dark-text', 'hover:text-primary-blue');
+                link.classList.remove('text-primary-blue');
             });
 
             // Add active class to current link
             navLinks.forEach(link => {
                 if (link.getAttribute('href') === currentHash) {
-                    link.classList.add('active');
+                    link.classList.add('active', 'text-primary-blue');
+                    link.classList.remove('text-dark-text', 'hover:text-primary-blue');
                 }
             });
         };
 
-        // Set active link on page load
-        setActiveLink();
+        // Function to set active link based on scroll position
+        const setActiveByScroll = () => {
+            let currentSection = '';
 
-        // Set active link when hash changes
-        window.addEventListener('hashchange', setActiveLink);
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                // Check if we've scrolled to this section (with a small offset to trigger earlier)
+                if (window.scrollY >= (sectionTop - 100)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            if (currentSection !== '') {
+                // Remove active class from all links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    link.classList.add('text-dark-text', 'hover:text-primary-blue');
+                    link.classList.remove('text-primary-blue');
+
+                    // Add active class to current section's link
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active', 'text-primary-blue');
+                        link.classList.remove('text-dark-text', 'hover:text-primary-blue');
+                    }
+                });
+            }
+        };
+
+        // Set active link on page load
+        setActiveByHash();
+
+        // Set active link when hash changes (when clicking nav links)
+        window.addEventListener('hashchange', setActiveByHash);
+
+        // Set active link when scrolling
+        window.addEventListener('scroll', setActiveByScroll);
     });
 </script>

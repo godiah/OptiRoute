@@ -23,6 +23,10 @@
     <x-partners-stats />
 
     <!-- How It Works Section -->
+    <x-how-it-works />
+
+    <!-- Benefits -->
+    <x-benefits />
 </body>
 
 </html>

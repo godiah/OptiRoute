@@ -3,8 +3,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="mb-4 md:mb-8">
             <div class="flex items-center w-full mb-2">
-                <h2 class="text-4xl font-bold font-secondary whitespace-nowrap pr-4">Trusted <span
-                        class="text-secondary-green">Partners</span></h2>
+                <h2 class="text-4xl font-bold font-secondary whitespace-nowrap drop-shadow-lg pr-4">Trusted <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Partners</span>
+                </h2>
                 <hr class="w-full border-gray-300">
             </div>
             <p class="text-gray-500">Powering logistics operations for industry leaders worldwide</p>
@@ -52,8 +53,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="pt-16 mb-4 md:mb-8">
             <div class="flex items-center w-full mb-2">
-                <h2 class="text-4xl font-bold font-secondary whitespace-nowrap pr-4">Making an <span
-                        class="text-secondary-green">Impact</span></h2>
+                <h2 class="text-4xl font-bold font-secondary whitespace-nowrap drop-shadow-lg pr-4">Making an <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Impact</span>
+                </h2>
                 <hr class="w-full border-gray-300">
             </div>
             <p class="text-gray-500">Transforming logistics operations with AI-powered
