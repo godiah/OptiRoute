@@ -10,7 +10,7 @@
 
         <!-- Section Heading -->
         <div class="mb-4 md:mb-8 relative">
-            <div class="flex items-center w-full mb-2">
+            <div class="flex items-center w-full mb-2" data-aos="fade-down" data-aos-delay="100">
                 <h2
                     class="text-3xl text-center mx-auto md:text-4xl font-bold font-secondary md:whitespace-nowrap drop-shadow-lg md:pr-4">
                     How
@@ -18,10 +18,10 @@
                         class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">OptiRoute</span>
                     Works
                 </h2>
-                <hr class="hidden md:block w-full border-gray-300">
+                <hr class="hidden md:block w-full border-gray-300" data-aos="fade-up" data-aos-delay="200">
             </div>
-            <p class="text-gray-500 text-center md:text-start">Streamline your logistics operations with our intelligent
-                route optimization system
+            <p class="text-gray-500 text-center md:text-start" data-aos="fade-up" data-aos-delay="200">
+                Streamline your logistics operations with our intelligent route optimization system
             </p>
         </div>
 
@@ -37,7 +37,7 @@
             </div>
 
             <!-- Process Steps -->
-            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 relative z-10">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 relative z-10" data-aos="fade-up" data-aos-delay="100">
                 <!-- Step 1 -->
                 <div
                     class="flex flex-col bg-light-gray rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -171,21 +171,25 @@
         <div class="container mx-auto px-4 mt-24 mb-12">
             <div class="flex flex-col lg:flex-row items-start gap-4 md:gap-16">
                 <!-- Title section -->
-                <div class="w-full lg:w-1/3 text-center lg:text-left">
+                <div class="w-full lg:w-1/3 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800"
+                    data-aos-offset="100">
                     <h3 class="text-4xl font-bold font-secondary md:whitespace-nowrap drop-shadow-lg">
                         <span
                             class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Logistics</span>
                         Process Overview
                     </h3>
-                    <p class="mt-4 text-gray-600 text-justify">Our comprehensive system integrates seamlessly with your
-                        existing workflows, providing immediate visibility and control over your entire delivery network
-                        while reducing operational costs.
+                    <p class="mt-4 text-gray-600 text-justify" data-aos="fade-up" data-aos-delay="200">
+                        Our comprehensive system integrates seamlessly with your existing workflows, providing immediate
+                        visibility and control over your entire delivery network while reducing operational costs.
                     </p>
-                    <x-book-demo-btn />
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <x-book-demo-btn />
+                    </div>
                 </div>
 
                 <!-- Flow diagram - larger width on desktop -->
-                <div class="w-full flex items-center justify-center lg:w-2/3 mt-8 lg:mt-0">
+                <div class="w-full flex items-center justify-center lg:w-2/3 mt-8 lg:mt-0" data-aos="fade-left"
+                    data-aos-duration="1000" data-aos-delay="100">
                     <img src="{{ asset('images/flow-diag-1.png') }}" alt="OptiRoute System Flow Diagram"
                         class="w-full h-auto object-contain">
                 </div>
@@ -193,7 +197,7 @@
         </div>
 
         <!-- Features Section -->
-        <div class="mt-2">
+        <div class="mt-2" data-aos="fade-up" data-aos-delay="100">
             <div class="relative mt-16 mb-12 pt-8 px-8 pb-8 border-2 border-gray-200 rounded-2xl">
                 <!-- Title on the border -->
                 <div class="absolute -top-4 left-4 md:left-8 px-1.5 md:px-4 bg-white">
@@ -229,7 +233,8 @@
                 <div class="absolute bottom-1/5 right-1/5">
                     <!-- Cluster nodes -->
                     <div class="absolute w-5 h-5 rounded-full bg-secondary-green opacity-15"></div>
-                    <div class="absolute w-7 h-7 rounded-full bg-primary-blue opacity-15 -translate-x-14 translate-y-6">
+                    <div
+                        class="absolute w-7 h-7 rounded-full bg-primary-blue opacity-15 -translate-x-14 translate-y-6">
                     </div>
                     <div
                         class="absolute w-4 h-4 rounded-full bg-secondary-green opacity-15 -translate-x-6 translate-y-12">
@@ -241,7 +246,8 @@
                     <!-- Connector lines -->
                     <div class="absolute h-px w-14 bg-gray-300 opacity-20 -rotate-30 -translate-x-7 translate-y-3">
                     </div>
-                    <div class="absolute h-px w-8 bg-gray-300 opacity-20 rotate-60 -translate-x-10 translate-y-9"></div>
+                    <div class="absolute h-px w-8 bg-gray-300 opacity-20 rotate-60 -translate-x-10 translate-y-9">
+                    </div>
                     <div class="absolute h-px w-6 bg-gray-300 opacity-20 rotate-30 -translate-x-12 translate-y-14">
                     </div>
                 </div>
@@ -263,7 +269,8 @@
                     <!-- Connector lines -->
                     <div class="absolute h-px w-14 bg-gray-300 opacity-20 -rotate-30 -translate-x-7 translate-y-3">
                     </div>
-                    <div class="absolute h-px w-8 bg-gray-300 opacity-20 rotate-60 -translate-x-10 translate-y-9"></div>
+                    <div class="absolute h-px w-8 bg-gray-300 opacity-20 rotate-60 -translate-x-10 translate-y-9">
+                    </div>
                     <div class="absolute h-px w-6 bg-gray-300 opacity-20 rotate-30 -translate-x-12 translate-y-14">
                     </div>
                 </div>

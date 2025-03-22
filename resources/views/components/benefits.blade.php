@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Heading -->
         <div class="mb-8">
-            <div class="flex items-center w-full mb-2">
+            <div class="flex items-center w-full mb-2" data-aos="fade-down" data-aos-delay="100">
                 <h2
                     class="text-3xl font-bold font-secondary drop-shadow-lg p-0.5 text-center mx-auto md:text-4xl md:whitespace-nowrap md:pr-4">
                     Why
@@ -11,7 +11,7 @@
                         class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">OptiRoute
                         ?</span>
                 </h2>
-                <hr class="hidden md:block w-full border-gray-300">
+                <hr class="hidden md:block w-full border-gray-300" data-aos="fade-up" data-aos-delay="200">
             </div>
         </div>
 
@@ -40,7 +40,7 @@
 
             <!-- Benefit 4 -->
             <x-benefits-card :reverse="true">
-                <x-benefits-card-image src="images/undraw_delivery.svg" alt="Simplify Route Planning" />
+                <x-benefits-card-image src="images/undraw_plan.svg" alt="Simplify Route Planning" />
                 <x-benefits-card-text title="Simplify Route Planning"
                     description="Plan routes effortlessly—our AI handles orders, vehicles, and traffic for you." />
             </x-benefits-card>
@@ -54,7 +54,7 @@
 
             <!-- Benefit 6 -->
             <x-benefits-card :reverse="true">
-                <x-benefits-card-image src="images/undraw_fleet.svg" alt="Scalable for Any Fleet Size" />
+                <x-benefits-card-image src="images/undraw_logistics.svg" alt="Scalable for Any Fleet Size" />
                 <x-benefits-card-text title="Scalable for Any Fleet Size"
                     description="Grow with ease—optimize routes for small teams or large fleets alike." />
             </x-benefits-card>

@@ -2,19 +2,20 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <!-- Section Heading -->
         <div class="pt-16 mb-8">
-            <div class="flex items-center w-full mb-2">
+            <div class="flex items-center w-full mb-2" data-aos="fade-down" data-aos-delay="100">
                 <h2
                     class="text-3xl font-bold font-secondary drop-shadow-lg p-0.5 text-center mx-auto md:text-4xl md:whitespace-nowrap md:pr-4">
                     <span
                         class="bg-clip-text text-transparent bg-gradient-to-r from-primary-blue to-secondary-green">Unlock</span>
                     Better Results
                 </h2>
-                <hr class="hidden md:block w-full border-gray-300">
+                <hr class="hidden md:block w-full border-gray-300" data-aos="fade-up" data-aos-delay="200">
             </div>
-            <p class="text-gray-500 text-center md:text-start">See firsthand how our solution solves your most pressing
+            <p class="text-gray-500 text-center md:text-start" data-aos="fade-up" data-aos-delay="200">See firsthand how
+                our solution solves your most pressing
                 business challenges.</p>
         </div>
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
             <div class="grid md:grid-cols-5">
                 <!-- Left side - content -->
                 <div class="bg-primary-blue text-white p-8 md:p-10 md:col-span-2">

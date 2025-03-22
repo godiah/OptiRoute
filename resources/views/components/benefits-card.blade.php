@@ -6,7 +6,7 @@
     $layoutClass = $reverse ? 'flex-row-reverse md:flex-row' : 'flex-row';
 @endphp
 
-<div
-    class="flex bg-light-gray rounded-2xl overflow-hidden border-2 border-gray-300 mx-auto p-1 md:p-4 {{ $layoutClass }}">
+<div class="flex bg-light-gray rounded-2xl overflow-hidden border-2 border-gray-300 mx-auto p-1 md:p-4 {{ $layoutClass }}"
+    data-aos="fade-up" data-aos-delay="100">
     {{ $slot }}
 </div>

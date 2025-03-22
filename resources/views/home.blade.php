@@ -8,6 +8,7 @@
     <title>OptiRoute</title>
 
     <!-- Styles / Scripts -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -93,7 +94,10 @@
         }
     </script>
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
