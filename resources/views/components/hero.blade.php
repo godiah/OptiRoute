@@ -1,5 +1,5 @@
 <section id="home" class="relative w-full bg-cover bg-center bg-no-repeat pt-20"
-    style="background-image: url('{{ asset('images/hero-image.jpg') }}'); height: calc(75vh + 5rem);">
+    style="background-image: url('{{ asset('images/hero-image.jpg') }}'); height: calc(90vh + 5rem);">
     <!-- Overlay with gradient + blur effect -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70 backdrop-blur-[2px]"></div>
 

@@ -25,6 +25,15 @@
     <!-- How It Works Section -->
     <x-how-it-works />
 
+    <!-- Fleet Tracking Section -->
+    <x-fleet-tracking />
+
+    <!-- Smart Assignment Section -->
+    <x-smart-assignment />
+
+    <!-- Business Intelligence Section -->
+    <x-business-intelligence />
+
     <!-- Benefits -->
     <x-benefits />
 
