@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\DemoRequestAcknowledgment;
 use App\Mail\NewDemoRequest;
 use App\Models\DemoRequest;
 use Illuminate\Http\Request;
@@ -26,7 +27,10 @@ class DemoRequestController extends Controller
         // Create the demo request
         $demoRequest = DemoRequest::create($validated);
 
-        // Send email to admin
+        // Send acknowledgment email to the user
+        Mail::to($demoRequest->email)->send(new DemoRequestAcknowledgment($demoRequest));
+
+        // Send notification email to admin
         $adminEmail = env('ADMIN_EMAIL');
         Mail::to($adminEmail)->send(new NewDemoRequest($demoRequest));
 

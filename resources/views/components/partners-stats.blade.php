@@ -112,7 +112,7 @@
                             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
                     </div>
-                    <h3 class="text-4xl font-bold font-secondary mb-1" data-aos="fade-up" data-aos-delay="100">$240B
+                    <h3 class="text-4xl font-bold font-secondary mb-1" data-aos="fade-up" data-aos-delay="100">$1M
                     </h3>
                     <p class="text-sm text-gray-500 uppercase font-semibold tracking-wider">Annual Industry Waste</p>
                     <div class="mt-4 pt-4 border-t border-gray-100">
@@ -166,7 +166,7 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
                     </div>
-                    <h3 class="text-4xl font-bold font-secondary mb-1" data-aos="fade-up" data-aos-delay="100">2026
+                    <h3 class="text-4xl font-bold font-secondary mb-1" data-aos="fade-up" data-aos-delay="100">2027
                     </h3>
                     <p class="text-sm text-gray-500 uppercase font-semibold tracking-wider">5,000+ Users Goal</p>
                     <div class="mt-4 pt-4 border-t border-gray-100">
