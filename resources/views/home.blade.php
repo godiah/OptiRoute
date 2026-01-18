@@ -5,7 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>OptiRoute</title>
+    <title>OptiRoute - AI-Powered Route Optimization</title>
+    <meta name="description" content="Transform your logistics operations with OptiRoute's AI-powered route optimization. Reduce costs by 30% and carbon emissions by 37%.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
     <!-- Styles / Scripts -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
