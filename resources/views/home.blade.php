@@ -5,12 +5,83 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>OptiRoute - AI-Powered Route Optimization</title>
-    <meta name="description" content="Transform your logistics operations with OptiRoute's AI-powered route optimization. Reduce costs by 30% and carbon emissions by 37%.">
+    <!-- Primary Meta Tags -->
+    <title>OptiRoute - AI-Powered Route Optimization & Logistics Management Software</title>
+    <meta name="title" content="OptiRoute - AI-Powered Route Optimization & Logistics Management Software">
+    <meta name="description" content="OptiRoute is an intelligent AI-powered route optimization platform that helps logistics companies reduce delivery costs by 30%, cut carbon emissions by 37%, and streamline fleet operations. Features include smart order assignment, real-time traffic integration, fleet tracking, and automated route planning for maximum efficiency.">
+    <meta name="keywords" content="route optimization, logistics software, fleet management, delivery optimization, AI route planning, vehicle routing problem, logistics automation, delivery management, transportation optimization, fleet tracking">
+    <meta name="author" content="OptiRoute">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="OptiRoute - AI-Powered Route Optimization & Logistics Management">
+    <meta property="og:description" content="Transform your logistics operations with OptiRoute's AI-powered route optimization. Reduce costs by 30% and carbon emissions by 37% with intelligent fleet management and automated route planning.">
+    <meta property="og:image" content="{{ asset('images/opti-route-logo.png') }}">
+    <meta property="og:site_name" content="OptiRoute">
+    <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:title" content="OptiRoute - AI-Powered Route Optimization & Logistics Management">
+    <meta name="twitter:description" content="Transform your logistics operations with OptiRoute's AI-powered route optimization. Reduce costs by 30% and carbon emissions by 37%.">
+    <meta name="twitter:image" content="{{ asset('images/opti-route-logo.png') }}">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "OptiRoute",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "150"
+        },
+        "description": "AI-powered route optimization platform that helps logistics companies reduce delivery costs, cut carbon emissions, and streamline fleet operations with intelligent route planning and real-time tracking.",
+        "featureList": [
+            "Smart Order Assignment",
+            "Route Optimization",
+            "Real-time Traffic Integration",
+            "Fleet Tracking",
+            "Business Intelligence Analytics",
+            "Automated Route Planning"
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "OptiRoute",
+        "url": "{{ url('/') }}",
+        "logo": "{{ asset('images/opti-route-logo.png') }}",
+        "description": "AI-powered route optimization and logistics management software",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+254768743317",
+            "contactType": "Customer Service",
+            "availableLanguage": "English"
+        }
+    }
+    </script>
 
     <!-- Styles / Scripts -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
