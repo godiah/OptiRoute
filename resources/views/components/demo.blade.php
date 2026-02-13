@@ -141,6 +141,12 @@
                                     <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
+
+                            <!-- Honeypot field - hidden from humans, bots will fill this -->
+                            <div class="hidden" aria-hidden="true">
+                                <label for="website">Website</label>
+                                <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
+                            </div>
                         </div>
 
                         <div class="pt-2">

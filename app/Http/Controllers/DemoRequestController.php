@@ -15,6 +15,12 @@ class DemoRequestController extends Controller
      */
     public function store(Request $request)
     {
+        // Honeypot check - reject if bot filled the hidden field
+        if ($request->filled('website')) {
+            // Silently reject bot submissions (return success to not alert the bot)
+            return back()->with('success', 'Thank you! Your demo request has been received. We will contact you shortly to schedule a convenient time.');
+        }
+
         // Validate the request
         $validated = $request->validate([
             'company' => 'required|string|max:255',
