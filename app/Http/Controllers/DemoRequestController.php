@@ -15,10 +15,15 @@ class DemoRequestController extends Controller
      */
     public function store(Request $request)
     {
-        // Honeypot check - reject if bot filled the hidden field
-        if ($request->filled('website')) {
-            // Silently reject bot submissions (return success to not alert the bot)
-            return back()->with('success', 'Thank you! Your demo request has been received. We will contact you shortly to schedule a convenient time.');
+        // Honeypot: reject if any hidden field was filled (bots often fill every field)
+        if ($request->filled('website') || $request->filled('fax')) {
+            return $this->fakeSuccess();
+        }
+
+        // Time check: form must be open at least 4 seconds (humans need time to fill; bots submit instantly)
+        $loadedAt = session('demo_form_loaded_at');
+        if (! $loadedAt || (time() - (int) $loadedAt) < 4) {
+            return $this->fakeSuccess();
         }
 
         // Validate the request
@@ -40,6 +45,14 @@ class DemoRequestController extends Controller
         $adminEmail = env('ADMIN_EMAIL');
         Mail::to($adminEmail)->send(new NewDemoRequest($demoRequest));
 
+        return back()->with('success', 'Thank you! Your demo request has been received. We will contact you shortly to schedule a convenient time.');
+    }
+
+    /**
+     * Return same success response as real submission so bots don't know they were rejected.
+     */
+    private function fakeSuccess(): \Illuminate\Http\RedirectResponse
+    {
         return back()->with('success', 'Thank you! Your demo request has been received. We will contact you shortly to schedule a convenient time.');
     }
 }
