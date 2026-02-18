@@ -15,8 +15,8 @@ class DemoRequestController extends Controller
      */
     public function store(Request $request)
     {
-        // Honeypot: reject if any hidden field was filled (bots often fill every field)
-        if ($request->filled('website') || $request->filled('fax')) {
+        // Honeypot: reject if hidden field was filled (bots often fill every field)
+        if ($request->filled('website')) {
             return $this->fakeSuccess();
         }
 

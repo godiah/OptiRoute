@@ -147,10 +147,6 @@
                                 <label for="website">Leave blank</label>
                                 <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
                             </div>
-                            <div class="absolute -left-[9999px] opacity-0 h-0 overflow-hidden" aria-hidden="true">
-                                <label for="fax">Fax number</label>
-                                <input type="text" name="fax" id="fax" tabindex="-1" autocomplete="off">
-                            </div>
                         </div>
 
                         <div class="pt-2">
